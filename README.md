@@ -67,6 +67,17 @@ Run these from the project directory:
 | `python -m iam.get_users_detail` | Show details for an IAM user; prompts for the username. |
 | `python -m iam.list_roles` | List IAM roles. |
 | `python -m iam.list_policies` | List locally managed IAM policies. |
+| `python -m iam.create_users_from_yaml` | Create IAM users from `iam/users.yaml` and add them to the listed groups; asks for confirmation first. |
+
+Edit `iam/users.yaml` to define the users and their IAM groups. The groups must
+already exist. Install dependencies with `python -m pip install -r requirements.txt`,
+then run the command above from the project directory. To use another YAML file,
+pass its path after the module name, for example
+`python -m iam.create_users_from_yaml C:\path\to\users.yaml`.
+
+This creates IAM user identities and group memberships only; it does not create
+console passwords or access keys. The configured AWS identity needs permission to
+create users and add users to groups.
 
 ## S3 names and download paths
 

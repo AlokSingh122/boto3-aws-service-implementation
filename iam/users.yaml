@@ -1,0 +1,7 @@
+users:
+  - username: Alok-Developer
+    groups:
+      - Group1
+  - username: Alok-CloudUser
+    groups:
+      - Group1
