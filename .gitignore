@@ -24,3 +24,6 @@ htmlcov/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Generated AWS inventory
+lambda/lambda_inventory.json
